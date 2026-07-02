@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://7xoggpnd2lhi"]
+
+[ext_resource type="Texture2D" uid="uid://bl7few0sea041" path="res://titlescreenkuri.png" id="1_cjnew"]
+[ext_resource type="Script" uid="uid://ccnhsqkqxaor" path="res://titlescreen.gd" id="1_goadl"]
+
+[node name="titlescreen" type="Node2D" unique_id=859073966]
+script = ExtResource("1_goadl")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=940422996]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_cjnew")
+expand_mode = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TextureRect" unique_id=1390871136]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 94.0
+offset_right = 1093.0
+offset_bottom = 349.0
+theme_override_colors/font_outline_color = Color(0.34435117, 0.19347417, 0.18151167, 1)
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/normal_font_size = 108
+text = "KurimanjuWare"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1077697437]
+offset_left = 409.0
+offset_top = 265.0
+offset_right = 735.0
+offset_bottom = 460.0
+
+[node name="start" type="Button" parent="VBoxContainer" unique_id=110343519]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "start"
+
+[node name="settings" type="Button" parent="VBoxContainer" unique_id=450991387]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "settings"
+
+[node name="quit" type="Button" parent="VBoxContainer" unique_id=848513244]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "quit"
+
+[connection signal="pressed" from="VBoxContainer/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/settings" to="." method="_on_settings_pressed"]
