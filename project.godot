@@ -15,6 +15,10 @@ run/main_scene="res://titlescreen.tscn"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global="*uid://jwuauempcao8"
+
 [display]
 
 window/stretch/mode="viewport"

@@ -1,3 +1,62 @@
 [gd_scene format=3 uid="uid://8btgq1or0v5i"]
 
-[node name="levelscreen" type="Node2D" unique_id=415353225]
+[ext_resource type="Script" uid="uid://v5b631ibe7at" path="res://levelscreen.gd" id="1_6maqq"]
+[ext_resource type="Texture2D" uid="uid://bx6p8ifwchdcc" path="res://levelscren.png" id="1_th1c8"]
+[ext_resource type="Texture2D" uid="uid://c2sa01803n0k8" path="res://biru.png" id="2_6maqq"]
+
+[node name="timerscreen" type="Node2D" unique_id=415353225]
+script = ExtResource("1_6maqq")
+
+[node name="bg" type="TextureRect" parent="." unique_id=8555176]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_th1c8")
+expand_mode = 1
+
+[node name="birucontainer" type="HBoxContainer" parent="bg" unique_id=1539958779]
+layout_mode = 0
+offset_left = 135.0
+offset_top = 88.0
+offset_right = 1017.0
+offset_bottom = 255.0
+
+[node name="biru" type="TextureRect" parent="bg/birucontainer" unique_id=636271434]
+layout_mode = 2
+texture = ExtResource("2_6maqq")
+expand_mode = 2
+
+[node name="biru2" type="TextureRect" parent="bg/birucontainer" unique_id=2024088725]
+layout_mode = 2
+texture = ExtResource("2_6maqq")
+expand_mode = 2
+
+[node name="biru3" type="TextureRect" parent="bg/birucontainer" unique_id=514508407]
+layout_mode = 2
+texture = ExtResource("2_6maqq")
+expand_mode = 2
+
+[node name="biru4" type="TextureRect" parent="bg/birucontainer" unique_id=1705256408]
+layout_mode = 2
+texture = ExtResource("2_6maqq")
+expand_mode = 2
+
+[node name="biru5" type="TextureRect" parent="bg/birucontainer" unique_id=653379511]
+layout_mode = 2
+texture = ExtResource("2_6maqq")
+expand_mode = 2
+
+[node name="level" type="RichTextLabel" parent="." unique_id=1322357890]
+offset_left = 499.0
+offset_top = 288.0
+offset_right = 812.0
+offset_bottom = 379.0
+theme_override_font_sizes/normal_font_size = 42
+text = "level #"
+
+[node name="timer" type="RichTextLabel" parent="." unique_id=1079107204]
+offset_left = 522.0
+offset_top = 555.0
+offset_right = 732.0
+offset_bottom = 726.0
+theme_override_font_sizes/normal_font_size = 42
+text = "0.0"
